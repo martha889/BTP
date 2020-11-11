@@ -1,40 +1,39 @@
 package com.example.ntpc;
 
-import androidx.appcompat.app.AppCompatActivity;
+        import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.widget.Toast;
+        import android.content.Intent;
+        import android.os.Bundle;
+        import android.widget.Toast;
 
-import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.data.LineData;
-import com.github.mikephil.charting.data.LineDataSet;
-import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
-import com.github.mikephil.charting.listener.OnChartGestureListener;
-import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
+        import com.github.mikephil.charting.charts.LineChart;
+        import com.github.mikephil.charting.data.Entry;
+        import com.github.mikephil.charting.data.LineData;
+        import com.github.mikephil.charting.data.LineDataSet;
+        import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+        import com.github.mikephil.charting.listener.OnChartGestureListener;
+        import com.github.mikephil.charting.listener.OnChartValueSelectedListener;
 
-import org.w3c.dom.Entity;
+        import org.w3c.dom.Entity;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
+        import java.lang.reflect.Array;
+        import java.util.ArrayList;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
+        import retrofit2.Call;
+        import retrofit2.Callback;
+        import retrofit2.Response;
+        import retrofit2.Retrofit;
+        import retrofit2.converter.gson.GsonConverterFactory;
 
-public class PlotGraphActivity extends AppCompatActivity {
+public class PlotPredictionActivity extends AppCompatActivity {
 
     private LineChart lineChartAgSg;
     private LineChart lineChartAg;
     private LineChart lineChartDev;
 
-    private ArrayList<Float> PastDevArray;
-    private ArrayList<Float> PlotYSg;
-    private ArrayList<Float> PlotYAg;
-    private ArrayList<Float> PlotXBlockNumber;
+    private ArrayList<Float> MLXBlockNumber;
+    private ArrayList<Float> MLYPredictedValue;
+    private ArrayList<Float> MLYActualValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,22 +91,21 @@ public class PlotGraphActivity extends AppCompatActivity {
                     return;
                 }
                 PowerPlantDataPojo powerPlantDataPojo = response.body();
-                PastDevArray =  powerPlantDataPojo.getPastDevArray();
-                PlotYSg = powerPlantDataPojo.getPlotYSg();
-                PlotYAg = powerPlantDataPojo.getPlotYAg();
-                PlotXBlockNumber = powerPlantDataPojo.getPlotXBlockNumber();
-                System.out.println(PlotXBlockNumber);
+                MLYPredictedValue = powerPlantDataPojo.getMLYPredictedValue();
+                MLYActualValue = powerPlantDataPojo.getMLYActualValue();
+                MLXBlockNumber = powerPlantDataPojo.getMLXBlockNumber();
+                System.out.println(MLXBlockNumber);
 
                 ArrayList<Entry> valuesSg = new ArrayList<>();
                 ArrayList<Entry> valuesAg = new ArrayList<>();
 
-                for (int i=0; i<PlotXBlockNumber.size(); i++) {
-                    valuesSg.add(new Entry(PlotXBlockNumber.get(i), PlotYSg.get(i)));
-                    valuesAg.add(new Entry(PlotXBlockNumber.get(i), PlotYAg.get(i)));
+                for (int i=0; i<MLXBlockNumber.size(); i++) {
+                    valuesSg.add(new Entry(MLXBlockNumber.get(i), MLYPredictedValue.get(i)));
+                    valuesAg.add(new Entry(MLXBlockNumber.get(i), MLYActualValue.get(i)));
 
                 }
 
-                System.out.println(PlotYAg);
+                System.out.println(MLYActualValue);
 
                 //int len = PlotXBlockNumber.size();
                 //System.out.println(len);
@@ -117,8 +115,8 @@ public class PlotGraphActivity extends AppCompatActivity {
             float y = (float)PlotYAg.get(i).floatValue();
             values.add(new Entry(x,y));
         }*/
-                LineDataSet setSg = new LineDataSet(valuesSg, "SG");
-                LineDataSet setAg = new LineDataSet(valuesAg, "AG");
+                LineDataSet setSg = new LineDataSet(valuesSg, "Predicted Value");
+                LineDataSet setAg = new LineDataSet(valuesAg, "Actual Value");
 
                 setSg.setFillAlpha(110);
                 setSg.setColors(new int[] {R.color.GraphSG});
@@ -129,17 +127,17 @@ public class PlotGraphActivity extends AppCompatActivity {
                 setAg.setLineWidth(2f);
 //                setAg.setColors(new int[] { R.color.GraphAG});
                 setAg.setValueTextSize(0);
-           
+
                 ArrayList<ILineDataSet> dataSetsAgSg = new ArrayList<>();
-           
+
                 dataSetsAgSg.add(setSg);
                 dataSetsAgSg.add(setAg);
 
-           
+
                 LineData dataSg = new LineData(dataSetsAgSg);
-           
+
                 lineChartAgSg.setData(dataSg);
-           
+
 
             }
 

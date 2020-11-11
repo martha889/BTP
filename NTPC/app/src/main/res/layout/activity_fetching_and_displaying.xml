@@ -346,8 +346,8 @@
                     android:id="@+id/button_current"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
                     android:layout_marginLeft="150dp"
+                    android:layout_marginTop="25dp"
                     android:layout_weight="1"
                     android:background="@drawable/custom_button"
                     android:gravity="center"
@@ -358,9 +358,9 @@
                     android:id="@+id/button_previous"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
                     android:layout_marginTop="25dp"
                     android:layout_weight="1"
-                    android:layout_marginLeft="30dp"
                     android:background="@drawable/custom_button"
                     android:gravity="center"
                     android:text="Previous Block Data"
@@ -513,7 +513,7 @@
                         android:layout_margin="1dp"
                         android:layout_weight="1"
                         android:background="#000000"
-                        android:text="Avg Ex-Bus (MW)"
+                        android:text="AG/SG %"
                         android:gravity="center_horizontal"
                         android:textColor="#4c9900"
                         android:textSize="18dp" />
@@ -527,34 +527,6 @@
                         android:text="0"
                         android:gravity="center_horizontal"
                         android:textColor="#66cc00"
-                        android:textSize="18dp" />
-                </TableRow>
-
-                <TableRow
-                    android:background="#ffffff"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:id="@+id/textView_previous6_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="1dp"
-                        android:layout_weight="1"
-                        android:background="#000000"
-                        android:text="Avg Ex-Bus/SG %"
-                        android:gravity="center_horizontal"
-                        android:textColor="#ffff99"
-                        android:textSize="18dp" />
-                    <TextView
-                        android:id="@+id/textView_previous6_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="1dp"
-                        android:layout_weight="1"
-                        android:background="#000000"
-                        android:text="0"
-                        android:gravity="center_horizontal"
-                        android:textColor="#66ffff"
                         android:textSize="18dp" />
                 </TableRow>
 
@@ -930,7 +902,7 @@
                         android:layout_margin="1dp"
                         android:layout_weight="1"
                         android:background="#000000"
-                        android:text="Avg Ex-Bus (MW)"
+                        android:text="AG/SG %"
                         android:gravity="center_horizontal"
                         android:textColor="#4c9900"
                         android:textSize="18dp" />
@@ -944,34 +916,6 @@
                         android:text="0"
                         android:gravity="center_horizontal"
                         android:textColor="#66cc00"
-                        android:textSize="18dp" />
-                </TableRow>
-
-                <TableRow
-                    android:background="#ffffff"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:id="@+id/textView_current6_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="1dp"
-                        android:layout_weight="1"
-                        android:background="#000000"
-                        android:text="Avg Ex-Bus/SG %"
-                        android:gravity="center_horizontal"
-                        android:textColor="#ffff99"
-                        android:textSize="18dp" />
-                    <TextView
-                        android:id="@+id/textView_current6_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="1dp"
-                        android:layout_weight="1"
-                        android:background="#000000"
-                        android:text="0"
-                        android:gravity="center_horizontal"
-                        android:textColor="#66ffff"
                         android:textSize="18dp" />
                 </TableRow>
 
@@ -1199,6 +1143,90 @@
                         android:textSize="18dp" />
                 </TableRow>
 
+                <TableRow
+                    android:background="#ffffff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/textView_current15_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="#000000"
+                        android:text="No. of continuous +ve Blks"
+                        android:gravity="center_horizontal"
+                        android:textColor="#ffff99"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:id="@+id/textView_current15_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="#000000"
+                        android:text="0"
+                        android:gravity="center_horizontal"
+                        android:textColor="#ffffff"
+                        android:textSize="18dp" />
+                </TableRow>
+
+                <TableRow
+                    android:background="#ffffff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/textView_current16_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="#000000"
+                        android:text="No. of continuous -ve Blks"
+                        android:gravity="center_horizontal"
+                        android:textColor="#ffff99"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:id="@+id/textView_current16_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="#000000"
+                        android:text="0"
+                        android:gravity="center_horizontal"
+                        android:textColor="#ffffff"
+                        android:textSize="18dp" />
+                </TableRow>
+
+                <TableRow
+                    android:background="#ffffff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/textView_current17_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="#000000"
+                        android:text="Sign Violations"
+                        android:gravity="center_horizontal"
+                        android:textColor="#ffff99"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:id="@+id/textView_current17_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="1dp"
+                        android:layout_weight="1"
+                        android:background="#000000"
+                        android:text="0"
+                        android:gravity="center_horizontal"
+                        android:textColor="#ffffff"
+                        android:textSize="18dp" />
+                </TableRow>
+
 
             </TableLayout>
 
@@ -1222,7 +1250,7 @@
                         android:layout_margin="1dp"
                         android:layout_weight="1"
                         android:background="#000000"
-                        android:text="Nect Blocks Sg Values"
+                        android:text="Next Blocks Sg Values"
                         android:textStyle="bold"
                         android:gravity="center_horizontal"
                         android:textColor="#ffffff"

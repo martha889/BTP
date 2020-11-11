@@ -19,7 +19,7 @@ public class DisplayMenuActivity extends AppCompatActivity {
         MonitorData = (Button) findViewById(R.id.buttonMonitorData);
         PlotData = (Button) findViewById(R.id.buttonPlotData);
         final Intent intent1 = new Intent(this, FetchingAndDisplayingActivity.class);
-        final Intent intent2 = new Intent(this, PlotGraphActivity.class);
+        final Intent intent2 = new Intent(this, PlotPredictionActivity.class);
 
         MonitorData.setOnClickListener(new View.OnClickListener() {
             @Override

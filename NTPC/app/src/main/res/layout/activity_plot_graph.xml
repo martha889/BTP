@@ -7,8 +7,10 @@
     tools:context=".PlotGraphActivity">
 
     <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/graph"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/graph"/>
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="195dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
