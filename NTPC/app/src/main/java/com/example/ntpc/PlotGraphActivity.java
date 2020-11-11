@@ -28,6 +28,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class PlotGraphActivity extends AppCompatActivity {
 
     private LineChart lineChartAgSg;
+    private LineChart lineChartAg;
     private LineChart lineChartDev;
 
     private ArrayList<Float> PastDevArray;
@@ -42,15 +43,13 @@ public class PlotGraphActivity extends AppCompatActivity {
         getArrayValues();
 
         lineChartAgSg = (LineChart) findViewById(R.id.graph);
+        lineChartAg = (LineChart) findViewById(R.id.graph);
 
-
-
-        lineChartAgSg.getDescription().setEnabled(false);
         lineChartAgSg.setNoDataText("Loading...(Tap anywhere to continue)");
+
 
         lineChartAgSg.setDragEnabled(true);
         lineChartAgSg.setScaleEnabled(false);
-
 
 //        ArrayList<Entry> values = new ArrayList<>();
 //
@@ -130,17 +129,17 @@ public class PlotGraphActivity extends AppCompatActivity {
                 setAg.setLineWidth(2f);
 //                setAg.setColors(new int[] { R.color.GraphAG});
                 setAg.setValueTextSize(0);
-           
+
                 ArrayList<ILineDataSet> dataSetsAgSg = new ArrayList<>();
-           
+
                 dataSetsAgSg.add(setSg);
                 dataSetsAgSg.add(setAg);
 
-           
+
                 LineData dataSg = new LineData(dataSetsAgSg);
-           
+
                 lineChartAgSg.setData(dataSg);
-           
+
 
             }
 
