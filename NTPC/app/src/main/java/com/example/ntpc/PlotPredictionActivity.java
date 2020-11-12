@@ -2,7 +2,9 @@ package com.example.ntpc;
 
         import androidx.appcompat.app.AppCompatActivity;
 
+        import android.annotation.SuppressLint;
         import android.content.Intent;
+        import android.graphics.Color;
         import android.os.Bundle;
         import android.widget.Toast;
 
@@ -35,6 +37,7 @@ public class PlotPredictionActivity extends AppCompatActivity {
     private ArrayList<Float> MLYPredictedValue;
     private ArrayList<Float> MLYActualValue;
 
+    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +48,7 @@ public class PlotPredictionActivity extends AppCompatActivity {
         lineChartAg = (LineChart) findViewById(R.id.graph);
 
         lineChartAgSg.setNoDataText("Loading...(Tap anywhere to continue)");
+        lineChartAgSg.setNoDataTextColor(Color.BLACK);
 
 
         lineChartAgSg.setDragEnabled(true);
@@ -117,16 +121,6 @@ public class PlotPredictionActivity extends AppCompatActivity {
         }*/
                 LineDataSet setSg = new LineDataSet(valuesSg, "Predicted Value");
                 LineDataSet setAg = new LineDataSet(valuesAg, "Actual Value");
-
-                setSg.setFillAlpha(110);
-                setSg.setColors(new int[] {R.color.GraphSG});
-                setSg.setLineWidth(2f);
-                setSg.setValueTextSize(0);
-
-                setAg.setFillAlpha(110);
-                setAg.setLineWidth(2f);
-//                setAg.setColors(new int[] { R.color.GraphAG});
-                setAg.setValueTextSize(0);
 
                 ArrayList<ILineDataSet> dataSetsAgSg = new ArrayList<>();
 
