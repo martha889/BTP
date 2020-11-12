@@ -29,8 +29,7 @@ package com.example.ntpc;
 
 public class PlotPredictionActivity extends AppCompatActivity {
 
-    private LineChart lineChartAgSg;
-    private LineChart lineChartAg;
+    private LineChart PredictionGraph;
     private LineChart lineChartDev;
 
     private ArrayList<Float> MLXBlockNumber;
@@ -41,18 +40,17 @@ public class PlotPredictionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_plot_graph);
+        setContentView(R.layout.activity_plot_prediction);
         getArrayValues();
 
-        lineChartAgSg = (LineChart) findViewById(R.id.graph);
-        lineChartAg = (LineChart) findViewById(R.id.graph);
+        PredictionGraph = (LineChart) findViewById(R.id.graph);
 
-        lineChartAgSg.setNoDataText("Loading...(Tap anywhere to continue)");
-        lineChartAgSg.setNoDataTextColor(Color.BLACK);
+        PredictionGraph.setNoDataText("Loading...(Tap anywhere to continue)");
+        PredictionGraph.setNoDataTextColor(Color.WHITE);
 
 
-        lineChartAgSg.setDragEnabled(true);
-        lineChartAgSg.setScaleEnabled(false);
+        PredictionGraph.setDragEnabled(true);
+        PredictionGraph.setScaleEnabled(false);
 
 //        ArrayList<Entry> values = new ArrayList<>();
 //
@@ -95,6 +93,7 @@ public class PlotPredictionActivity extends AppCompatActivity {
                     return;
                 }
                 PowerPlantDataPojo powerPlantDataPojo = response.body();
+                assert powerPlantDataPojo != null;
                 MLYPredictedValue = powerPlantDataPojo.getMLYPredictedValue();
                 MLYActualValue = powerPlantDataPojo.getMLYActualValue();
                 MLXBlockNumber = powerPlantDataPojo.getMLXBlockNumber();
@@ -130,7 +129,7 @@ public class PlotPredictionActivity extends AppCompatActivity {
 
                 LineData dataSg = new LineData(dataSetsAgSg);
 
-                lineChartAgSg.setData(dataSg);
+                PredictionGraph.setData(dataSg);
 
 
             }
