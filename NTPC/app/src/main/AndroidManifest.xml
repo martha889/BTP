@@ -12,7 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+<<<<<<< HEAD
         <activity android:name=".PlotPredictionActivity" />
+=======
+        <activity android:name=".InputBaseUrlActivity"></activity>
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".FetchingAndDisplayingActivity" />
+>>>>>>> parent of ebf30ef... added prediction graph
         <activity android:name=".FrontPhotoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,9 +26,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".DisplayMenuActivity" />
         <activity android:name=".InputBaseUrlActivity" />
         <activity android:name=".FetchingAndDisplayingActivity" />
+=======
+>>>>>>> parent of ebf30ef... added prediction graph
     </application>
 
 </manifest>
