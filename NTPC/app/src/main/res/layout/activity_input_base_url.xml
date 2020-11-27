@@ -10,7 +10,6 @@
 
     <EditText
         android:id="@+id/enterUrl"
-<<<<<<< HEAD
 
         android:singleLine="true"
         android:imeOptions="actionDone"
@@ -28,23 +27,16 @@
         android:layout_marginEnd="26dp"
         android:layout_marginRight="26dp"
         android:background="#ffff"
-=======
-        android:layout_width="350dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="250dp"
-        android:layout_centerHorizontal="true"
-        android:textStyle="italic"
-        android:textAlignment="center"
->>>>>>> parent of ebf30ef... added prediction graph
         android:ems="10"
-        android:background="#ffff"
+        android:gravity="center_horizontal"
         android:hint="Enter Base Url"
         android:inputType="textPersonName"
         android:padding="10dp"
         android:text="http://ec2-54-236-56-160.compute-1.amazonaws.com/"
+        android:textAlignment="center"
+        android:textStyle="italic"
         tools:layout_editor_absoluteX="97dp"
-        tools:layout_editor_absoluteY="254dp"
-        android:gravity="center_horizontal" />
+        tools:layout_editor_absoluteY="254dp" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -55,7 +47,6 @@
 
     <Button
         android:id="@+id/submitButton"
-<<<<<<< HEAD
         android:layout_width="357dp"
         android:layout_height="91dp"
         android:layout_below="@+id/enterUrl"
@@ -72,13 +63,5 @@
         android:textSize="25dp"
         android:background="#414141"
         android:text="Enter Base URL" />
-=======
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="400dp"
-        android:background="@drawable/custom_button"
-        android:text="Submit" />
->>>>>>> parent of ebf30ef... added prediction graph
 
 </RelativeLayout>

@@ -50,7 +50,12 @@ public class PlotPredictionActivity extends AppCompatActivity {
 
 
         PredictionGraph.setDragEnabled(true);
+        PredictionGraph.setBackgroundColor(R.color.Foreground);
         PredictionGraph.setScaleEnabled(false);
+        PredictionGraph.getAxisLeft().setTextColor(Color.WHITE);
+        PredictionGraph.getAxisRight().setTextColor(Color.WHITE);
+        PredictionGraph.getXAxis().setTextColor(Color.WHITE);
+        PredictionGraph.getLegend().setTextColor(Color.WHITE);
 
 //        ArrayList<Entry> values = new ArrayList<>();
 //
@@ -120,6 +125,14 @@ public class PlotPredictionActivity extends AppCompatActivity {
         }*/
                 LineDataSet setSg = new LineDataSet(valuesSg, "Predicted Value");
                 LineDataSet setAg = new LineDataSet(valuesAg, "Actual Value");
+                setSg.setColor(Color.RED);
+                setSg.setLineWidth(2);
+                setSg.setCircleColor(Color.BLACK);
+                setSg.setValueTextColor(Color.WHITE);
+                setAg.setColor(Color.GREEN);
+                setAg.setCircleColor(Color.BLACK);
+                setAg.setValueTextColor(Color.WHITE);
+                setAg.setLineWidth(2);
 
                 ArrayList<ILineDataSet> dataSetsAgSg = new ArrayList<>();
 

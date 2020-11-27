@@ -347,14 +347,9 @@
                 <Button
                     android:id="@+id/button_current"
                     android:layout_width="100dp"
-<<<<<<< HEAD
                     android:layout_height="50dp"
                     android:layout_marginLeft="140dp"
-=======
-                    android:layout_height="wrap_content"
->>>>>>> parent of ebf30ef... added prediction graph
                     android:layout_marginTop="25dp"
-                    android:layout_marginLeft="150dp"
                     android:layout_weight="1"
                     android:background="#414141"
                     android:gravity="center"
@@ -364,19 +359,11 @@
                 <Button
                     android:id="@+id/button_previous"
                     android:layout_width="100dp"
-<<<<<<< HEAD
                     android:layout_height="50dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="25dp"
                     android:layout_weight="1"
                     android:background="#414141"
-=======
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-                    android:layout_weight="1"
-                    android:layout_marginLeft="30dp"
-                    android:background="@drawable/custom_button"
->>>>>>> parent of ebf30ef... added prediction graph
                     android:gravity="center"
                     android:text="Previous Block Data"
                     android:textColor="#ffffff" />
@@ -527,13 +514,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="1dp"
                         android:layout_weight="1"
-<<<<<<< HEAD
                         android:background="#212121"
                         android:text="AG/SG %"
-=======
-                        android:background="#000000"
-                        android:text="Avg Ex-Bus (MW)"
->>>>>>> parent of ebf30ef... added prediction graph
                         android:gravity="center_horizontal"
                         android:textColor="#4c9900"
                         android:textSize="18dp" />
@@ -547,34 +529,6 @@
                         android:text="0"
                         android:gravity="center_horizontal"
                         android:textColor="#66cc00"
-                        android:textSize="18dp" />
-                </TableRow>
-
-                <TableRow
-                    android:background="#ffffff"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:id="@+id/textView_previous6_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="1dp"
-                        android:layout_weight="1"
-                        android:background="#000000"
-                        android:text="Avg Ex-Bus/SG %"
-                        android:gravity="center_horizontal"
-                        android:textColor="#ffff99"
-                        android:textSize="18dp" />
-                    <TextView
-                        android:id="@+id/textView_previous6_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="1dp"
-                        android:layout_weight="1"
-                        android:background="#000000"
-                        android:text="0"
-                        android:gravity="center_horizontal"
-                        android:textColor="#66ffff"
                         android:textSize="18dp" />
                 </TableRow>
 
@@ -949,13 +903,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="1dp"
                         android:layout_weight="1"
-<<<<<<< HEAD
                         android:background="#212121"
                         android:text="AG/SG %"
-=======
-                        android:background="#000000"
-                        android:text="Avg Ex-Bus (MW)"
->>>>>>> parent of ebf30ef... added prediction graph
                         android:gravity="center_horizontal"
                         android:textColor="#4c9900"
                         android:textSize="18dp" />
@@ -969,34 +918,6 @@
                         android:text="0"
                         android:gravity="center_horizontal"
                         android:textColor="#66cc00"
-                        android:textSize="18dp" />
-                </TableRow>
-
-                <TableRow
-                    android:background="#ffffff"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:id="@+id/textView_current6_1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="1dp"
-                        android:layout_weight="1"
-                        android:background="#000000"
-                        android:text="Avg Ex-Bus/SG %"
-                        android:gravity="center_horizontal"
-                        android:textColor="#ffff99"
-                        android:textSize="18dp" />
-                    <TextView
-                        android:id="@+id/textView_current6_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="1dp"
-                        android:layout_weight="1"
-                        android:background="#000000"
-                        android:text="0"
-                        android:gravity="center_horizontal"
-                        android:textColor="#66ffff"
                         android:textSize="18dp" />
                 </TableRow>
 
@@ -1224,7 +1145,6 @@
                         android:textSize="18dp" />
                 </TableRow>
 
-<<<<<<< HEAD
                 <TableRow
                     android:background="#ffffff"
                     android:layout_width="match_parent"
@@ -1309,8 +1229,6 @@
                         android:textSize="18dp" />
                 </TableRow>
 
-=======
->>>>>>> parent of ebf30ef... added prediction graph
 
             </TableLayout>
 
@@ -1333,13 +1251,8 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="1dp"
                         android:layout_weight="1"
-<<<<<<< HEAD
                         android:background="#212121"
                         android:text="Next SG Values"
-=======
-                        android:background="#000000"
-                        android:text="Nect Blocks Sg Values"
->>>>>>> parent of ebf30ef... added prediction graph
                         android:textStyle="bold"
                         android:gravity="center_horizontal"
                         android:textColor="#ffffff"
