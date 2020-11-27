@@ -18,7 +18,7 @@ Since we didn't get to work on the actual powerplant (due to COVID-19), we've re
 2. The data is randomly generated: we've studied the ranges and trends in actual data and developed algorithms that would mimic the real-world data as much as possible. 
 3. The app fetches the data from the server and displays the results. 
 
-#### Added Featurs: 
+#### Added Features: 
 Beyond the required work, we've also added a machine-learning implementation within the app: the model is trained beforehand and its hyperparameters are stored on the server. The app then fetches these to create a plot between the actual value of power generation and the predicted value of power generation, effectively trying to minimize the difference between the two. 
 
 
