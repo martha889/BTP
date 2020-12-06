@@ -18,7 +18,7 @@ Since we didn't get to work on the actual powerplant (due to COVID-19), we've re
 2. The data is then hosted on an AWS server (comparable to the master computer).
 3. The android app fetches the data from the server using its URL and displays the results. 
 
-#### Added Features: 
+#### Additional Features: 
 Beyond the required work, we've also added a machine-learning implementation within the app: the model is trained beforehand and the predicted and actual values (for a certain day) are stored on the server. This is done in order to minimize the difference between the predicted and actual values, effectively minimizing monetary losses. The app then fetches these to create a plot between the actual value of power generation and the predicted value of power generation.
 
 
